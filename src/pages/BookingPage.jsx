@@ -103,7 +103,7 @@ const BookingPage = () => {
           <div className="mt-6">
             <h1 className="text-3xl font-bold mb-4">{bajaj.model}</h1>
             <p className="text-gray-600 mb-2">Registration Number: {bajaj.registrationNumber}</p>
-            <p className="text-2xl font-bold text-blue-600 mb-4">₹{bajaj.pricePerDay}/day</p>
+            <p className="text-2xl font-bold text-blue-600 mb-4">${bajaj.pricePerDay}/day</p>
             <p className="text-gray-700">{bajaj.description}</p>
           </div>
         </div>
@@ -140,7 +140,7 @@ const BookingPage = () => {
               <div className="mb-6 p-4 bg-gray-100 rounded-md">
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold">Total Amount:</span>
-                  <span className="text-2xl font-bold text-blue-600">₹{totalAmount}</span>
+                  <span className="text-2xl font-bold text-blue-600">${totalAmount}</span>
                 </div>
               </div>
             )}

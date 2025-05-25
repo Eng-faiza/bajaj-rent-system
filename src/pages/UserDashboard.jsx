@@ -199,7 +199,7 @@ const UserDashboard = () => {
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Total Spent</p>
                 <p className="text-2xl font-bold text-gray-900">
-                  ₹
+                  $
                   {Array.isArray(bookings)
                     ? bookings.reduce((sum, booking) => sum + (booking?.totalAmount || 0), 0)
                     : 0}
@@ -297,8 +297,8 @@ const UserDashboard = () => {
                         </div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
-                        <div className="text-sm font-medium text-gray-900">₹{booking.totalAmount || 0}</div>
-                        <div className="text-sm text-gray-500">₹{booking.bajaj?.pricePerDay || 0}/day</div>
+                        <div className="text-sm font-medium text-gray-900">${booking.totalAmount || 0}</div>
+                        <div className="text-sm text-gray-500">${booking.bajaj?.pricePerDay || 0}/day</div>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <span
