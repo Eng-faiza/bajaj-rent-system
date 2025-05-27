@@ -29,7 +29,7 @@ const AdminDashboard = () => {
   const fetchBajajs = async () => {
     try {
       console.log("Fetching vehicles for admin dashboard...")
-      const response = await fetch("http://localhost:5000/api/bajaj", {
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/bajaj", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -70,7 +70,7 @@ const AdminDashboard = () => {
         throw new Error("No authentication token found")
       }
 
-      const response = await fetch("http://localhost:5000/api/booking/all", {
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/booking/all", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -167,7 +167,7 @@ const AdminDashboard = () => {
         formDataToSend.append("image", selectedImage)
       }
 
-      const response = await fetch("http://localhost:5000/api/bajaj", {
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/bajaj", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -214,7 +214,7 @@ const AdminDashboard = () => {
         formDataToSend.append("image", selectedImage)
       }
 
-      const response = await fetch(`http://localhost:5000/api/bajaj/${editingBajaj._id}`, {
+      const response = await fetch(`https://bajaj-rent-system-backend.onrender.com/api/bajaj/${editingBajaj._id}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`,
@@ -249,7 +249,7 @@ const AdminDashboard = () => {
           throw new Error("No authentication token found")
         }
 
-        const response = await fetch(`http://localhost:5000/api/bajaj/${id}`, {
+        const response = await fetch(`https://bajaj-rent-system-backend.onrender.com/api/bajaj/${id}`, {
           method: "DELETE",
           headers: {
             Authorization: `Bearer ${token}`,
@@ -291,7 +291,7 @@ const AdminDashboard = () => {
         throw new Error("No authentication token found")
       }
 
-      const response = await fetch(`http://localhost:5000/api/booking/${bookingId}/status`, {
+      const response = await fetch(`https://bajaj-rent-system-backend.onrender.com/api/booking/${bookingId}/status`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
