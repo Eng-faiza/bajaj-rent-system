@@ -25,7 +25,7 @@ const BookingPage = () => {
 
   const fetchBajaj = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/bajaj`)
+      const response = await fetch(`https://bajaj-rent-system-backend.onrender.com/api/bajaj`)
       const data = await response.json()
       const selectedBajaj = data.find((b) => b._id === id)
       setBajaj(selectedBajaj)
@@ -55,7 +55,7 @@ const BookingPage = () => {
 
     try {
       const token = localStorage.getItem("token")
-      const response = await fetch("http://localhost:5000/api/booking", {
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/booking", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
