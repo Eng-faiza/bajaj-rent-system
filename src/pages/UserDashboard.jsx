@@ -23,7 +23,7 @@ const UserDashboard = () => {
         throw new Error("No authentication token found. Please login again.")
       }
 
-      const response = await fetch("http://localhost:5000/api/booking/my-bookings", {
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/booking/my-bookings", {
         headers: {
           Authorization: `Bearer ${token}`,
           "Content-Type": "application/json",
@@ -270,7 +270,7 @@ const UserDashboard = () => {
                             className="h-12 w-12 rounded-lg object-cover"
                             src={
                               booking.bajaj?.image?.startsWith("/uploads")
-                                ? `http://localhost:5000${booking.bajaj.image}`
+                                ? `https://bajaj-rent-system-backend.onrender.com${booking.bajaj.image}`
                                 : booking.bajaj?.image || "/placeholder.svg?height=48&width=48"
                             }
                             alt={booking.bajaj?.model || "Vehicle"}

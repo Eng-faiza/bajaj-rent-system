@@ -12,7 +12,7 @@ const BajajCard = ({ bajaj, onEdit, onDelete, showActions = false }) => {
         <img
           src={
             bajaj.image?.startsWith("/uploads")
-              ? `http://localhost:5000${bajaj.image}`
+              ? `https://bajaj-rent-system-backend.onrender.com${bajaj.image}`
               : bajaj.image || "/placeholder.svg?height=250&width=400"
           }
           alt={bajaj.model}

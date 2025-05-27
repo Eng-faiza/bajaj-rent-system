@@ -21,7 +21,7 @@ const Home = () => {
   const fetchAvailableBajajs = async () => {
     try {
       setError(null)
-      const response = await fetch("http://localhost:5000/api/bajaj/available")
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/bajaj/available")
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)

@@ -8,7 +8,7 @@ const DebugInfo = () => {
 
   const checkServerHealth = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/health")
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/health")
       const data = await response.json()
       setServerStatus({ status: "Connected", data })
     } catch (error) {
@@ -18,7 +18,7 @@ const DebugInfo = () => {
 
   const testBajajAPI = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/bajaj")
+      const response = await fetch("https://bajaj-rent-system-backend.onrender.com/api/bajaj")
       const data = await response.json()
       setApiResponse({ status: response.status, data })
     } catch (error) {
